@@ -1,0 +1,3 @@
+# Chest exercises are one Exercise with two Forms
+
+On any given day the chest exercises are done either on the machine (e.g. Bench Press (Wide)) or as body-weight pushups (e.g. Wide Pushup). Each pair is modelled as one Exercise with a Press Form and a Pushup Form, chosen per Exercise in each Session and remembered for next time, with a one-click "switch all chest" action. We rejected separate "Weights" and "Body" Workouts and per-Session exercise lists: both split the history of a Workout and can't mix Forms in one Session. Previous Reps compares only within the same Form, because pushup reps aren't a meaningful target for a machine press.
