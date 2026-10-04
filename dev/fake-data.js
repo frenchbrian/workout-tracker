@@ -36,7 +36,7 @@ const db = {
     { id: 2, session_entry_id: 2, load_type: 'bands', load_value: 230, position: null, reps: 11, note: null },
     { id: 3, session_entry_id: 3, load_type: 'machine', load_value: 6, position: 4, reps: 8, note: null },
     { id: 4, session_entry_id: 4, load_type: 'bands', load_value: 230, position: null, reps: 9, note: null },
-    { id: 5, session_entry_id: 5, load_type: 'body', load_value: null, position: 4, reps: 20, note: null },
+    { id: 5, session_entry_id: 5, load_type: 'body', load_value: null, position: null, reps: 20, note: null },
     { id: 6, session_entry_id: 6, load_type: 'bands', load_value: 230, position: null, reps: 13, note: null },
   ],
 };

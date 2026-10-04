@@ -222,7 +222,7 @@ def build(sessions):
                 form = None
             notes = [n for n in (note, x['e'] if isinstance(x['e'], str) else None,
                                  x['p'] if isinstance(x['p'], str) else None) if n and str(n).strip()]
-            position = int(num(x['p'])) if num(x['p']) is not None else None
+            position = int(num(x['p'])) if num(x['p']) is not None and ltype == 'machine' else None
             seid = len(se_rows) + 1
             se_rows.append((seid, sid, entries[key], exercises[name], sort_order, side, warmup, form))
             reps = num(x['reps'])

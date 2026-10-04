@@ -33,13 +33,14 @@ export async function renderSession(root, sessionId, { toast, go }) {
     const source = earlier || last;
     let load_type = source?.load_type ?? (e.form ? allowed[0] : 'free_weight');
     let load_value = source?.load_value ?? null;
-    const position = source?.position ?? null;
+    let position = source?.position ?? null;
     if (ex.next_load_type && allowed.includes(ex.next_load_type)) {
       load_type = ex.next_load_type;
       load_value = ex.next_load_value;
     }
     if (!allowed.includes(load_type)) { load_type = allowed[0]; load_value = null; }
     if (load_type === 'body') load_value = null;
+    if (load_type !== 'machine') position = null; // Position is a machine setting
     return { load_type, load_value, position, reps: null, note: '' };
   }
 
@@ -55,7 +56,7 @@ export async function renderSession(root, sessionId, { toast, go }) {
       e.set = await db.saveSet(e.id, {
         load_type: d.load_type,
         load_value: d.load_type === 'body' || d.load_value === '' || d.load_value === null ? null : Number(d.load_value),
-        position: d.position === '' || d.position === null ? null : Number(d.position),
+        position: d.load_type !== 'machine' || d.position === '' || d.position === null ? null : Number(d.position),
         reps,
         note,
       });
@@ -132,7 +133,7 @@ export async function renderSession(root, sessionId, { toast, go }) {
       type: 'number', step: 'any', inputmode: 'decimal', class: 'load', value: fmtNum(d.load_value), 'aria-label': 'Load',
       onchange: async (ev) => { d.load_value = ev.target.value; await onLoadChange(); },
     });
-    const posInput = h('label', { class: 'pos' }, 'Pos ', h('input', {
+    const posInput = d.load_type !== 'machine' ? null : h('label', { class: 'pos' }, 'Pos ', h('input', {
       type: 'number', inputmode: 'numeric', value: d.position ?? '', 'aria-label': 'Machine position',
       onchange: async (ev) => { d.position = ev.target.value; await onLoadChange(); },
     }));

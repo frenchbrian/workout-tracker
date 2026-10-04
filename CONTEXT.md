@@ -59,5 +59,5 @@ The kind of resistance: Bands (combined pounds of the bands), Free Weight (pound
 _Avoid_: Weight type, equipment
 
 **Position**:
-The setting on a machine for an Exercise, e.g. pin or seat position.
+The setting a machine's parts are moved to for an Exercise, e.g. pin or seat position. Only Machine Loads have a Position.
 _Avoid_: Setting, slot
