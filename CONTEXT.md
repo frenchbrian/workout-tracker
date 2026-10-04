@@ -7,12 +7,8 @@ Logs strength workouts set by set so each session can be compared against the la
 ### Plans
 
 **Workout**:
-A named, ordered list of exercises done together on one day, e.g. Chest n Back, Upper Body, Legs, Shoulders n Arms, Kettlebell. Changes made during a Session apply to that Session only; the Workout itself changes only when edited directly.
+A named, ordered list of exercises done together on one day, e.g. Chest n Back, Upper Body, Legs, Shoulders n Arms, Kettlebell. Repeats are written out in full (Chest n Back lists its 12 exercises twice), and any part of the list may be skipped on the day. Changes made during a Session apply to that Session only; the Workout itself changes only when edited directly.
 _Avoid_: Routine, tab, program
-
-**Round**:
-One pass through a Workout's exercise list. Every Workout offers a second Round; doing it is optional on the day.
-_Avoid_: Circuit, lap
 
 **Exercise**:
 A single named movement from the shared catalog, e.g. Seated Lat Row. The same Exercise can appear more than once in a Workout's list.
@@ -41,11 +37,11 @@ One dated performance of a Workout.
 _Avoid_: Workout (when meaning a dated instance), day, log
 
 **Set**:
-One Exercise done once within one Round of a Session, recorded as Load and Reps.
-_Avoid_: Entry, row
+One entry of a Workout's list done in a Session, recorded as Load and Reps. Skipped entries have no Set.
+_Avoid_: Row, round
 
 **Previous Reps**:
-The Reps from the same list entry (it follows the entry if reordered), same Round and same Form in the most recent Session of the same Workout in which that Round was done. It is the number to beat.
+The Reps from the same list entry (it follows the entry if reordered) and same Form in the most recent Session of the same Workout in which that entry was done. It is the number to beat.
 _Avoid_: Old Reps, last reps
 
 **Next Load**:

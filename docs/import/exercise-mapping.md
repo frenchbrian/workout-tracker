@@ -94,4 +94,4 @@ Form is inferred per Set: Machine gives Press; Body or Weight Vest gives Pushup.
 2. **Chest n Back vs. Chest n Back (2):** identical through 2026-08-27. After that, "Chest n Back" has 08-30 and "(2)" has 09-16, 09-21 and 09-30. All four are imported. The empty 10-04 block is skipped.
 3. **Chest n Back 2** has a 2026-07-06 session that conflicts with the one in "(2)". The "(2)" version is kept. Its 07-13, 07-17 and 07-21 sessions are imported.
 4. **Two blocks on one date:** 2025-11-20's two blocks are near-identical, so only one is imported. 2025-12-21 and 2026-07-21 each have two blocks with different numbers, and both are imported as separate Sessions on that date.
-5. Blank Sets (an unfinished second Round) aren't imported. "Old Reps" isn't imported because the app works out Previous Reps itself. Text in the Notes/New Weight column becomes a Set note.
+5. Each block is imported as written, with every row its own list entry (repeats included). Rows without reps aren't imported. "Old Reps" isn't imported because the app works out Previous Reps itself. Text in the Notes/New Weight column becomes a Set note.
