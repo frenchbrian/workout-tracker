@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workout Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Workout Tracker</h1>
+
+    <section id="signed-out" hidden>
+      <p>Sign in to log your workouts.</p>
+      <button id="sign-in" type="button">Sign in with GitHub</button>
+    </section>
+
+    <section id="signed-in" hidden>
+      <p>Signed in as <strong id="who"></strong></p>
+      <h2>Workouts</h2>
+      <ul id="workouts"></ul>
+      <button id="sign-out" type="button" class="secondary">Sign out</button>
+    </section>
+
+    <p id="status" role="status"></p>
+  </main>
+</body>
+</html>
